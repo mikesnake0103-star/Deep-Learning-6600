@@ -1,0 +1,5 @@
+horizon,15 min,15 min,15 min,30 min,30 min,30 min,60 min,60 min,60 min
+,MAE,RMSE,MAPE (%),MAE,RMSE,MAPE (%),MAE,RMSE,MAPE (%)
+model,,,,,,,,,
+"Historical average (dow × tod, train)",4.19,7.86,13.06,4.19,7.86,13.06,4.19,7.86,13.06
+Persistence (last observed),3.71,7.47,8.94,4.62,9.64,11.48,6.14,12.61,15.69

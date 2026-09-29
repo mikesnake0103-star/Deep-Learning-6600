@@ -1,0 +1,13 @@
+# Core (EDA + data layer)
+numpy>=1.26
+pandas>=2.1
+h5py>=3.10
+scipy>=1.11
+matplotlib>=3.8
+seaborn>=0.13
+statsmodels>=0.14
+requests>=2.31
+# Notebook execution
+jupyter
+nbconvert
+ipykernel
