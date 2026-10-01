@@ -6,6 +6,7 @@ DSAN 6600 (Neural Nets & Advanced Deep Learning, Georgetown, Fall 2026). We fore
 * **EDA notebook:** [notebooks/01_eda.ipynb](notebooks/01_eda.ipynb)
 * **Dataset access notes:** [data/README.md](data/README.md)
 * **Team:**: Junyoung (Mike) Kwon, Jason Wang
+* **Video**: https://www.loom.com/share/5a2acec4c3a54ec69a6aef8a1a8459d1
 
 ## Repo layout
 ```
