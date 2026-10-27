@@ -1,0 +1,8 @@
+{
+  "epochs_trained": 40,
+  "best_epoch": 39,
+  "best_val_mae": 3.258488736724199,
+  "wall_clock_min": 18.467736434936523,
+  "n_params": 51340,
+  "device": "mps"
+}

@@ -1,0 +1,43 @@
+config: {"data_dir": "/Users/mikekwon/Documents/georgetownFall26/DSAN6600/Deep-Learning-6600/Project_check_in_1/data", "run_name": "gru_h64_seed1", "runs_dir": "/Users/mikekwon/Documents/georgetownFall26/DSAN6600/Deep-Learning-6600/Project_check_in_2/runs", "hidden": 64, "layers": 2, "dropout": 0.1, "head_hidden": 128, "use_mask": true, "use_dow": false, "lr": 0.001, "weight_decay": 0.0001, "batch_size": 64, "clip": 5.0, "lr_factor": 0.5, "lr_patience": 3, "es_patience": 8, "max_epochs": 40, "train_subset_frac": 1.0, "seed": 1, "device": null, "overfit": false, "overfit_windows": 200, "overfit_steps": 100, "time_epoch": false, "device_requested": "mps"}
+device mps | params 51,340 | train windows 23,967 (375 batches) | val 3,404
+epoch   1 | train 4.072 | val 3.461 (15/30/60: 2.87/3.44/4.35) | lr 1.0e-03 | 28.1s *
+epoch   2 | train 3.647 | val 3.408 (15/30/60: 2.83/3.39/4.26) | lr 1.0e-03 | 28.0s *
+epoch   3 | train 3.597 | val 3.375 (15/30/60: 2.81/3.36/4.22) | lr 1.0e-03 | 28.0s *
+epoch   4 | train 3.568 | val 3.355 (15/30/60: 2.80/3.34/4.18) | lr 1.0e-03 | 28.1s *
+epoch   5 | train 3.547 | val 3.349 (15/30/60: 2.79/3.33/4.18) | lr 1.0e-03 | 28.1s *
+epoch   6 | train 3.532 | val 3.342 (15/30/60: 2.78/3.34/4.15) | lr 1.0e-03 | 28.0s *
+epoch   7 | train 3.519 | val 3.318 (15/30/60: 2.77/3.32/4.11) | lr 1.0e-03 | 28.1s *
+epoch   8 | train 3.504 | val 3.318 (15/30/60: 2.78/3.31/4.11) | lr 1.0e-03 | 28.0s
+epoch   9 | train 3.495 | val 3.312 (15/30/60: 2.77/3.31/4.10) | lr 1.0e-03 | 28.0s *
+epoch  10 | train 3.487 | val 3.318 (15/30/60: 2.77/3.32/4.12) | lr 1.0e-03 | 28.0s
+epoch  11 | train 3.481 | val 3.299 (15/30/60: 2.76/3.30/4.08) | lr 1.0e-03 | 27.9s *
+epoch  12 | train 3.475 | val 3.302 (15/30/60: 2.77/3.31/4.08) | lr 1.0e-03 | 27.9s
+epoch  13 | train 3.471 | val 3.297 (15/30/60: 2.76/3.31/4.07) | lr 1.0e-03 | 27.9s *
+epoch  14 | train 3.466 | val 3.300 (15/30/60: 2.76/3.30/4.07) | lr 1.0e-03 | 27.9s
+epoch  15 | train 3.462 | val 3.330 (15/30/60: 2.79/3.34/4.10) | lr 1.0e-03 | 27.9s
+epoch  16 | train 3.459 | val 3.287 (15/30/60: 2.76/3.29/4.06) | lr 1.0e-03 | 28.0s *
+epoch  17 | train 3.458 | val 3.296 (15/30/60: 2.76/3.30/4.07) | lr 1.0e-03 | 28.0s
+epoch  18 | train 3.454 | val 3.280 (15/30/60: 2.75/3.29/4.05) | lr 1.0e-03 | 28.0s *
+epoch  19 | train 3.453 | val 3.292 (15/30/60: 2.75/3.30/4.06) | lr 1.0e-03 | 28.3s
+epoch  20 | train 3.450 | val 3.294 (15/30/60: 2.77/3.30/4.04) | lr 1.0e-03 | 28.0s
+epoch  21 | train 3.448 | val 3.292 (15/30/60: 2.76/3.29/4.06) | lr 1.0e-03 | 28.0s
+epoch  22 | train 3.444 | val 3.271 (15/30/60: 2.74/3.28/4.03) | lr 1.0e-03 | 28.0s *
+epoch  23 | train 3.446 | val 3.275 (15/30/60: 2.75/3.28/4.03) | lr 1.0e-03 | 28.2s
+epoch  24 | train 3.441 | val 3.286 (15/30/60: 2.76/3.30/4.04) | lr 1.0e-03 | 28.4s
+epoch  25 | train 3.442 | val 3.291 (15/30/60: 2.77/3.30/4.04) | lr 1.0e-03 | 27.4s
+epoch  26 | train 3.440 | val 3.270 (15/30/60: 2.74/3.28/4.04) | lr 1.0e-03 | 27.4s *
+epoch  27 | train 3.437 | val 3.289 (15/30/60: 2.76/3.30/4.04) | lr 1.0e-03 | 27.1s
+epoch  28 | train 3.436 | val 3.272 (15/30/60: 2.74/3.29/4.03) | lr 1.0e-03 | 27.3s
+epoch  29 | train 3.434 | val 3.269 (15/30/60: 2.74/3.28/4.02) | lr 1.0e-03 | 28.5s *
+epoch  30 | train 3.433 | val 3.272 (15/30/60: 2.74/3.28/4.03) | lr 1.0e-03 | 27.7s
+epoch  31 | train 3.434 | val 3.280 (15/30/60: 2.75/3.29/4.04) | lr 1.0e-03 | 27.5s
+epoch  32 | train 3.434 | val 3.265 (15/30/60: 2.74/3.27/4.02) | lr 1.0e-03 | 26.6s *
+epoch  33 | train 3.430 | val 3.263 (15/30/60: 2.73/3.27/4.01) | lr 1.0e-03 | 26.7s *
+epoch  34 | train 3.428 | val 3.283 (15/30/60: 2.75/3.29/4.04) | lr 1.0e-03 | 26.9s
+epoch  35 | train 3.427 | val 3.273 (15/30/60: 2.75/3.28/4.03) | lr 1.0e-03 | 27.1s
+epoch  36 | train 3.428 | val 3.259 (15/30/60: 2.74/3.27/4.00) | lr 1.0e-03 | 27.0s *
+epoch  37 | train 3.427 | val 3.277 (15/30/60: 2.75/3.29/4.02) | lr 1.0e-03 | 27.0s
+epoch  38 | train 3.426 | val 3.265 (15/30/60: 2.74/3.28/4.01) | lr 1.0e-03 | 27.1s
+epoch  39 | train 3.422 | val 3.258 (15/30/60: 2.73/3.27/4.01) | lr 1.0e-03 | 26.7s *
+epoch  40 | train 3.422 | val 3.260 (15/30/60: 2.73/3.27/4.01) | lr 1.0e-03 | 26.8s
+done: {"epochs_trained": 40, "best_epoch": 39, "best_val_mae": 3.258488736724199, "wall_clock_min": 18.467736434936523, "n_params": 51340, "device": "mps"}

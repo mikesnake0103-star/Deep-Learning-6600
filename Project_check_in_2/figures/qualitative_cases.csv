@@ -1,0 +1,4 @@
+case,sensor_id,date,event_time,note,GRU MAE 15min,HA MAE 15min,GRU MAE 60min,HA MAE 60min
+(a) GRU does well,718076,2012-06-22 (Fri),,,1.31,1.66,1.36,1.66
+(b) sudden congestion onset,716571,2012-06-15 (Fri),2012-06-15 17:40,drop 69.3 -> 4.0 mph in 30 min,2.75,2.57,3.32,2.57
+(c) right after network outage,717461,2012-06-18 (Mon),2012-06-18 11:05,"outage 21:15-11:00 (166 steps, all sensors missing)",7.43,20.59,13.21,20.59

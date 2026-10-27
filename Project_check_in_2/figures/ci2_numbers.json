@@ -1,0 +1,550 @@
+{
+ "training": {
+  "epochs_trained": 40,
+  "best_epoch": 40,
+  "best_val_mae": 3.2491268809554494,
+  "wall_clock_min": 18.217496784528098,
+  "n_params": 51340,
+  "device": "mps",
+  "mean_epoch_sec": 27.322625517845154,
+  "lr_final": 0.00025,
+  "lr_reductions": 2
+ },
+ "results": {
+  "GRU (shared-weight, ours)": {
+   "15 min MAE": 2.99,
+   "15 min RMSE": 5.89,
+   "15 min MAPE (%)": 8.03,
+   "30 min MAE": 3.6,
+   "30 min RMSE": 7.28,
+   "30 min MAPE (%)": 10.32,
+   "60 min MAE": 4.46,
+   "60 min RMSE": 8.95,
+   "60 min MAPE (%)": 13.76
+  },
+  "Persistence (last observed)": {
+   "15 min MAE": 3.71,
+   "15 min RMSE": 7.47,
+   "15 min MAPE (%)": 8.94,
+   "30 min MAE": 4.62,
+   "30 min RMSE": 9.64,
+   "30 min MAPE (%)": 11.48,
+   "60 min MAE": 6.14,
+   "60 min RMSE": 12.61,
+   "60 min MAPE (%)": 15.69
+  },
+  "Historical average (dow \u00d7 tod, train)": {
+   "15 min MAE": 4.19,
+   "15 min RMSE": 7.86,
+   "15 min MAPE (%)": 13.06,
+   "30 min MAE": 4.19,
+   "30 min RMSE": 7.86,
+   "30 min MAPE (%)": 13.06,
+   "60 min MAE": 4.19,
+   "60 min RMSE": 7.86,
+   "60 min MAPE (%)": 13.06
+  }
+ },
+ "gain_vs_best_probe_pct": {
+  "15 min": 19.4,
+  "30 min": 14.2,
+  "60 min": -6.5
+ },
+ "mae_by_horizon": {
+  "GRU": {
+   "5": 2.38,
+   "10": 2.73,
+   "15": 2.99,
+   "20": 3.22,
+   "25": 3.41,
+   "30": 3.6,
+   "35": 3.77,
+   "40": 3.93,
+   "45": 4.07,
+   "50": 4.21,
+   "55": 4.34,
+   "60": 4.46
+  },
+  "Persistence": {
+   "5": 2.89,
+   "10": 3.35,
+   "15": 3.71,
+   "20": 4.04,
+   "25": 4.33,
+   "30": 4.62,
+   "35": 4.89,
+   "40": 5.16,
+   "45": 5.41,
+   "50": 5.66,
+   "55": 5.9,
+   "60": 6.14
+  },
+  "HA": {
+   "5": 4.19,
+   "10": 4.19,
+   "15": 4.19,
+   "20": 4.19,
+   "25": 4.19,
+   "30": 4.19,
+   "35": 4.19,
+   "40": 4.19,
+   "45": 4.19,
+   "50": 4.19,
+   "55": 4.19,
+   "60": 4.19
+  }
+ },
+ "regime": [
+  {
+   "horizon": "15 min",
+   "regime": "congested (<40)",
+   "share of targets": 0.12,
+   "GRU": 7.45,
+   "Persistence": 7.34,
+   "HA": 12.9
+  },
+  {
+   "horizon": "15 min",
+   "regime": "free-flow (>=40)",
+   "share of targets": 0.88,
+   "GRU": 2.37,
+   "Persistence": 3.2,
+   "HA": 2.96
+  },
+  {
+   "horizon": "30 min",
+   "regime": "congested (<40)",
+   "share of targets": 0.12,
+   "GRU": 10.18,
+   "Persistence": 9.67,
+   "HA": 12.9
+  },
+  {
+   "horizon": "30 min",
+   "regime": "free-flow (>=40)",
+   "share of targets": 0.88,
+   "GRU": 2.67,
+   "Persistence": 3.91,
+   "HA": 2.96
+  },
+  {
+   "horizon": "60 min",
+   "regime": "congested (<40)",
+   "share of targets": 0.12,
+   "GRU": 14.46,
+   "Persistence": 13.42,
+   "HA": 12.9
+  },
+  {
+   "horizon": "60 min",
+   "regime": "free-flow (>=40)",
+   "share of targets": 0.88,
+   "GRU": 3.06,
+   "Persistence": 5.12,
+   "HA": 2.96
+  }
+ ],
+ "outages_test": {
+  "runs": 22,
+  "steps": 666
+ },
+ "qualitative": [
+  {
+   "case": "(a) GRU does well",
+   "sensor_id": "718076",
+   "date": "2012-06-22 (Fri)",
+   "event_time": "",
+   "note": "",
+   "GRU MAE 15min": 1.31,
+   "HA MAE 15min": 1.66,
+   "GRU MAE 60min": 1.36,
+   "HA MAE 60min": 1.66
+  },
+  {
+   "case": "(b) sudden congestion onset",
+   "sensor_id": "716571",
+   "date": "2012-06-15 (Fri)",
+   "event_time": "2012-06-15 17:40",
+   "note": "drop 69.3 -> 4.0 mph in 30 min",
+   "GRU MAE 15min": 2.75,
+   "HA MAE 15min": 2.57,
+   "GRU MAE 60min": 3.32,
+   "HA MAE 60min": 2.57
+  },
+  {
+   "case": "(c) right after network outage",
+   "sensor_id": "717461",
+   "date": "2012-06-18 (Mon)",
+   "event_time": "2012-06-18 11:05",
+   "note": "outage 21:15-11:00 (166 steps, all sensors missing)",
+   "GRU MAE 15min": 7.43,
+   "HA MAE 15min": 20.59,
+   "GRU MAE 60min": 13.21,
+   "HA MAE 60min": 20.59
+  }
+ ],
+ "tod": {
+  "wd_peak_hour": 16,
+  "wd_peak_mae": 7.56,
+  "wd_night_mae_0_4": 2.97,
+  "wd_am_7_9": 6.67,
+  "wd_pm_15_18": 7.34,
+  "we_peak_hour": 14,
+  "we_peak_mae": 5.72,
+  "we_mean": 3.42,
+  "wd_mean": 4.67,
+  "gru60_worse_than_ha_hours_weekday": [
+   1,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   11,
+   15,
+   16,
+   17,
+   19,
+   20,
+   21
+  ]
+ },
+ "drop_lag": {
+  "events": 9974,
+  "sensors": 207,
+  "table": [
+   {
+    "model": "GRU",
+    "horizon (min)": 15,
+    "events": 9974,
+    "never crosses": 0.25,
+    "median lag (steps)": 3.0,
+    "IQR": "3\u20134",
+    "MAE in [t0, t0+60]": 9.57
+   },
+   {
+    "model": "GRU",
+    "horizon (min)": 60,
+    "events": 9974,
+    "never crosses": 0.4,
+    "median lag (steps)": 12.0,
+    "IQR": "9\u201313",
+    "MAE in [t0, t0+60]": 15.99
+   },
+   {
+    "model": "Persistence",
+    "horizon (min)": 15,
+    "events": 9974,
+    "never crosses": 0.02,
+    "median lag (steps)": 3.0,
+    "IQR": "3\u20133",
+    "MAE in [t0, t0+60]": 10.0
+   },
+   {
+    "model": "Persistence",
+    "horizon (min)": 60,
+    "events": 9974,
+    "never crosses": 0.02,
+    "median lag (steps)": 12.0,
+    "IQR": "0\u201312",
+    "MAE in [t0, t0+60]": 16.77
+   },
+   {
+    "model": "HA",
+    "horizon (min)": "any",
+    "events": 9974,
+    "never crosses": 0.57,
+    "median lag (steps)": 2.0,
+    "IQR": "-2\u20139",
+    "MAE in [t0, t0+60]": 11.73
+   }
+  ]
+ },
+ "missing": [
+  {
+   "missing input steps": "0",
+   "horizon (min)": 15,
+   "share of targets": 0.94,
+   "GRU": 2.94,
+   "Persistence": 3.45,
+   "HA": 4.15
+  },
+  {
+   "missing input steps": "0",
+   "horizon (min)": 60,
+   "share of targets": 0.93,
+   "GRU": 4.38,
+   "Persistence": 5.31,
+   "HA": 4.15
+  },
+  {
+   "missing input steps": "1\u20133",
+   "horizon (min)": 15,
+   "share of targets": 0.03,
+   "GRU": 3.29,
+   "Persistence": 3.8,
+   "HA": 4.68
+  },
+  {
+   "missing input steps": "1\u20133",
+   "horizon (min)": 60,
+   "share of targets": 0.03,
+   "GRU": 4.42,
+   "Persistence": 5.28,
+   "HA": 4.46
+  },
+  {
+   "missing input steps": "4\u20136",
+   "horizon (min)": 15,
+   "share of targets": 0.01,
+   "GRU": 3.57,
+   "Persistence": 3.93,
+   "HA": 5.54
+  },
+  {
+   "missing input steps": "4\u20136",
+   "horizon (min)": 60,
+   "share of targets": 0.01,
+   "GRU": 5.56,
+   "Persistence": 6.32,
+   "HA": 5.42
+  },
+  {
+   "missing input steps": "7\u201311",
+   "horizon (min)": 15,
+   "share of targets": 0.01,
+   "GRU": 3.79,
+   "Persistence": 4.2,
+   "HA": 4.66
+  },
+  {
+   "missing input steps": "7\u201311",
+   "horizon (min)": 60,
+   "share of targets": 0.01,
+   "GRU": 5.3,
+   "Persistence": 6.21,
+   "HA": 4.81
+  },
+  {
+   "missing input steps": "12 (all)",
+   "horizon (min)": 15,
+   "share of targets": 0.0,
+   "GRU": 8.29,
+   "Persistence": 59.14,
+   "HA": 4.56
+  },
+  {
+   "missing input steps": "12 (all)",
+   "horizon (min)": 60,
+   "share of targets": 0.01,
+   "GRU": 8.27,
+   "Persistence": 59.54,
+   "HA": 4.38
+  }
+ ],
+ "per_sensor": {
+  "median": 4.21,
+  "p90": 7.03,
+  "max": 10.08,
+  "min": 1.3,
+  "worst10": [
+   {
+    "sensor_id": "717462",
+    "GRU 60": 10.08,
+    "HA": 11.75,
+    "share <40 mph": 0.4,
+    "test missing rate": 0.1
+   },
+   {
+    "sensor_id": "718045",
+    "GRU 60": 9.91,
+    "HA": 7.52,
+    "share <40 mph": 0.3,
+    "test missing rate": 0.14
+   },
+   {
+    "sensor_id": "717461",
+    "GRU 60": 9.81,
+    "HA": 10.01,
+    "share <40 mph": 0.48,
+    "test missing rate": 0.2
+   },
+   {
+    "sensor_id": "717458",
+    "GRU 60": 9.68,
+    "HA": 9.04,
+    "share <40 mph": 0.5,
+    "test missing rate": 0.1
+   },
+   {
+    "sensor_id": "773939",
+    "GRU 60": 9.53,
+    "HA": 9.91,
+    "share <40 mph": 0.25,
+    "test missing rate": 0.1
+   },
+   {
+    "sensor_id": "717466",
+    "GRU 60": 9.15,
+    "HA": 11.95,
+    "share <40 mph": 0.32,
+    "test missing rate": 0.1
+   },
+   {
+    "sensor_id": "717468",
+    "GRU 60": 9.14,
+    "HA": 12.76,
+    "share <40 mph": 0.28,
+    "test missing rate": 0.1
+   },
+   {
+    "sensor_id": "716339",
+    "GRU 60": 9.02,
+    "HA": 7.13,
+    "share <40 mph": 0.56,
+    "test missing rate": 0.1
+   },
+   {
+    "sensor_id": "717472",
+    "GRU 60": 8.65,
+    "HA": 12.36,
+    "share <40 mph": 0.25,
+    "test missing rate": 0.13
+   },
+   {
+    "sensor_id": "716958",
+    "GRU 60": 8.08,
+    "HA": 8.04,
+    "share <40 mph": 0.25,
+    "test missing rate": 0.14
+   }
+  ],
+  "spearman": {
+   "share <40 mph": 0.89,
+   "test missing rate": 0.13,
+   "mean speed": -0.81
+  },
+  "worst10_share_of_total_abs_err": 0.101
+ },
+ "neighbors": {
+  "events": 892,
+  "sensors": 10,
+  "into: share earlier": 0.118,
+  "out: share earlier": 0.266,
+  "non-nbr: share earlier": 0.14,
+  "any nbr earlier": 0.892,
+  "any random (matched) earlier": 0.807,
+  "ratio_into_vs_nonnbr": 0.84,
+  "ratio_out_vs_nonnbr": 1.9
+ },
+ "seeds": {
+  "n": 4,
+  "runs": [
+   {
+    "run": "gru_h64",
+    "15 min MAE": 2.994,
+    "30 min MAE": 3.599,
+    "60 min MAE": 4.465,
+    "15 min RMSE": 5.892,
+    "30 min RMSE": 7.276,
+    "60 min RMSE": 8.948,
+    "best val MAE": 3.249,
+    "epochs": 40,
+    "best epoch": 40,
+    "min": 18.217
+   },
+   {
+    "run": "gru_h64_seed0",
+    "15 min MAE": 2.996,
+    "30 min MAE": 3.603,
+    "60 min MAE": 4.471,
+    "15 min RMSE": 5.903,
+    "30 min RMSE": 7.292,
+    "60 min RMSE": 8.962,
+    "best val MAE": 3.254,
+    "epochs": 40,
+    "best epoch": 40,
+    "min": 19.642
+   },
+   {
+    "run": "gru_h64_seed1",
+    "15 min MAE": 2.996,
+    "30 min MAE": 3.605,
+    "60 min MAE": 4.484,
+    "15 min RMSE": 5.897,
+    "30 min RMSE": 7.272,
+    "60 min RMSE": 8.943,
+    "best val MAE": 3.258,
+    "epochs": 40,
+    "best epoch": 39,
+    "min": 18.468
+   },
+   {
+    "run": "gru_h64_seed2",
+    "15 min MAE": 3.0,
+    "30 min MAE": 3.608,
+    "60 min MAE": 4.472,
+    "15 min RMSE": 5.903,
+    "30 min RMSE": 7.282,
+    "60 min RMSE": 8.936,
+    "best val MAE": 3.255,
+    "epochs": 40,
+    "best epoch": 40,
+    "min": 18.012
+   }
+  ],
+  "mean": {
+   "15 min MAE": 2.996,
+   "30 min MAE": 3.604,
+   "60 min MAE": 4.473,
+   "15 min RMSE": 5.899,
+   "30 min RMSE": 7.28,
+   "60 min RMSE": 8.947,
+   "best val MAE": 3.254,
+   "epochs": 40.0,
+   "best epoch": 39.75,
+   "min": 18.585
+  },
+  "std": {
+   "15 min MAE": 0.002,
+   "30 min MAE": 0.003,
+   "60 min MAE": 0.008,
+   "15 min RMSE": 0.005,
+   "30 min RMSE": 0.009,
+   "60 min RMSE": 0.011,
+   "best val MAE": 0.004,
+   "epochs": 0.0,
+   "best epoch": 0.5,
+   "min": 0.729
+  }
+ },
+ "mask_ablation": [
+  {
+   "run": "gru_h64",
+   "15 min MAE": 2.994,
+   "30 min MAE": 3.599,
+   "60 min MAE": 4.465,
+   "15 min RMSE": 5.892,
+   "30 min RMSE": 7.276,
+   "60 min RMSE": 8.948,
+   "best val MAE": 3.249,
+   "epochs": 40,
+   "best epoch": 40,
+   "min": 18.217
+  },
+  {
+   "run": "gru_h64_nomask",
+   "15 min MAE": 3.016,
+   "30 min MAE": 3.629,
+   "60 min MAE": 4.498,
+   "15 min RMSE": 5.975,
+   "30 min RMSE": 7.36,
+   "60 min RMSE": 9.018,
+   "best val MAE": 3.266,
+   "epochs": 40,
+   "best epoch": 40,
+   "min": 18.235
+  }
+ ]
+}

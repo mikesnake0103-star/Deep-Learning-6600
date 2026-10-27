@@ -1,0 +1,7 @@
+horizon,regime,share of targets,GRU,Persistence,HA
+15 min,congested (<40),0.124,7.448,7.341,12.899
+15 min,free-flow (>=40),0.876,2.366,3.203,2.964
+30 min,congested (<40),0.124,10.182,9.674,12.9
+30 min,free-flow (>=40),0.876,2.67,3.905,2.964
+60 min,congested (<40),0.124,14.456,13.418,12.905
+60 min,free-flow (>=40),0.876,3.056,5.117,2.965

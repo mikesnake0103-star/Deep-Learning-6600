@@ -1,0 +1,6 @@
+horizon,15 min,15 min,15 min,30 min,30 min,30 min,60 min,60 min,60 min
+metric,MAE,RMSE,MAPE (%),MAE,RMSE,MAPE (%),MAE,RMSE,MAPE (%)
+model,,,,,,,,,
+"GRU (shared-weight, ours)",2.99,5.89,8.03,3.6,7.28,10.32,4.46,8.95,13.76
+Persistence (last observed),3.71,7.47,8.94,4.62,9.64,11.48,6.14,12.61,15.69
+"Historical average (dow × tod, train)",4.19,7.86,13.06,4.19,7.86,13.06,4.19,7.86,13.06

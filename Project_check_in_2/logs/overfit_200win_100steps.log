@@ -1,0 +1,14 @@
+config: {"data_dir": "/Users/mikekwon/Documents/georgetownFall26/DSAN6600/Deep-Learning-6600/Project_check_in_1/data", "run_name": "gru_h64", "runs_dir": "/Users/mikekwon/Documents/georgetownFall26/DSAN6600/Deep-Learning-6600/Project_check_in_2/runs", "hidden": 64, "layers": 2, "dropout": 0.1, "head_hidden": 128, "use_mask": true, "use_dow": false, "lr": 0.001, "weight_decay": 0.0001, "batch_size": 64, "clip": 5.0, "lr_factor": 0.5, "lr_patience": 3, "es_patience": 8, "max_epochs": 40, "train_subset_frac": 1.0, "seed": 42, "device": "cpu", "overfit": true, "overfit_windows": 200, "overfit_steps": 100, "time_epoch": false, "device_requested": "cpu"}
+overfit check: 200 train windows (41,400 sensor-sequences), 100 steps, dropout 0, no weight decay, device cpu
+  step    1  masked MAE 8.597 mph
+  step   10  masked MAE 7.341 mph
+  step   20  masked MAE 5.965 mph
+  step   30  masked MAE 4.492 mph
+  step   40  masked MAE 4.431 mph
+  step   50  masked MAE 3.951 mph
+  step   60  masked MAE 2.853 mph
+  step   70  masked MAE 3.726 mph
+  step   80  masked MAE 4.031 mph
+  step   90  masked MAE 3.609 mph
+  step  100  masked MAE 2.489 mph
+overfit: first 8.597 -> last 2.489 mph (min 2.489)
