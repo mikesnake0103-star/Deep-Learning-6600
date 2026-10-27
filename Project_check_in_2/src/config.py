@@ -1,11 +1,8 @@
-"""Shared paths and runtime helpers for CI2.
+"""Paths and small helpers shared by train.py, evaluate.py and the notebook.
 
-Data is NOT copied into Project_check_in_2: everything is read from DATA_DIR,
-which defaults to ../Project_check_in_1/data and can be overridden with
-``--data-dir`` (train/evaluate).
+We don't copy the data into this folder. Everything is read from DATA_DIR,
+which points to ../Project_check_in_1/data (use --data-dir to change it).
 """
-from __future__ import annotations
-
 import random
 from pathlib import Path
 
@@ -17,20 +14,25 @@ RUNS_DIR = CI2_ROOT / "runs"
 FIG_DIR = CI2_ROOT / "figures"
 
 
-def data_paths(data_dir: str | Path = DATA_DIR) -> dict[str, Path]:
-    """Explicit paths, so the copied src/data.py never falls back to its own REPO_ROOT defaults."""
-    d = Path(data_dir).resolve()
-    raw = d / "raw" / "metr-la-dataset"
-    return {"data_dir": d, "processed": d / "processed", "raw": raw,
-            "h5": raw / "METR-LA.h5", "adj": raw / "adj_METR-LA.pkl",
-            "locations": raw / "graph_sensor_locations.csv"}
+def data_paths(data_dir=DATA_DIR):
+    # pass every path explicitly so the copied data.py doesn't use its own defaults
+    data_dir = Path(data_dir).resolve()
+    raw = data_dir / "raw" / "metr-la-dataset"
+    return {
+        "data_dir": data_dir,
+        "processed": data_dir / "processed",
+        "raw": raw,
+        "h5": raw / "METR-LA.h5",
+        "adj": raw / "adj_METR-LA.pkl",
+        "locations": raw / "graph_sensor_locations.csv",
+    }
 
 
-def get_device(prefer: str | None = None):
+def get_device(name=None):
     import torch
 
-    if prefer:
-        return torch.device(prefer)
+    if name:
+        return torch.device(name)
     if torch.cuda.is_available():
         return torch.device("cuda")
     if torch.backends.mps.is_available():
@@ -38,7 +40,7 @@ def get_device(prefer: str | None = None):
     return torch.device("cpu")
 
 
-def seed_everything(seed: int = 42):
+def seed_everything(seed=42):
     import torch
 
     random.seed(seed)
