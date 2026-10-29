@@ -1,12 +1,12 @@
-# CI2 — Shared-weight GRU baseline for METR-LA traffic forecasting
+# Check-in 2: A shared-weight GRU baseline for METR-LA traffic forecasting
 
-DSAN 6600 (Neural Nets & Advanced Deep Learning, Georgetown, Fall 2026), Project Check-in 2. We train and evaluate the first neural baseline on the CI1 pipeline: the same chronological 70/10/20 split, global z-score, missing-value mask, windows and masked metrics. The model forecasts speed at all 207 Los Angeles loop detectors 5–60 min ahead from the previous hour.
+This is our Project Check-in 2 for DSAN 6600 (Neural Nets & Advanced Deep Learning, Georgetown, Fall 2026). Here we train and evaluate our first neural model, a GRU that looks at the last hour of traffic speed at each of the 207 Los Angeles loop detectors and forecasts the next 5 to 60 minutes. Everything runs on the same pipeline we built in Check-in 1: the same chronological 70/10/20 split, normalization, missing-value mask, windows and masked metrics.
 
 * **Write-up:** [check-in-2.md](check-in-2.md)
 * **Results notebook:** [notebooks/02_ci2_results.ipynb](notebooks/02_ci2_results.ipynb)
 * **CI1 (problem, data, EDA):** [../Project_check_in_1/check-in-1.md](../Project_check_in_1/check-in-1.md)
-* **Video:** TODO(Mike): add video link
-* **Team:** TODO(Mike): names
+* **Video:** 
+* **Team:** Jason Wang/ Junyoung Kwon
 
 ## What's here
 ```
@@ -25,14 +25,14 @@ scripts/run_extras.sh       optional extras: seeds 0/1/2 + no-mask ablation, tra
 ```
 
 ## Data location (`DATA_DIR`)
-No data is copied into this folder. All code reads from **`DATA_DIR`**, which defaults to **`../Project_check_in_1/data`** (resolved relative to `Project_check_in_2/`). It must contain:
+We didn't copy the data into this folder. Instead, all the code reads from `DATA_DIR`, which points to `../Project_check_in_1/data` by default (relative to `Project_check_in_2/`). That folder needs to contain:
 * `processed/metr_la_processed.npz` and `processed/meta.json`, built by CI1's `prepare_processed()`
 * `raw/metr-la-dataset/{METR-LA.h5, adj_METR-LA.pkl, graph_sensor_locations.csv}`
 
-See [../Project_check_in_1/data/README.md](../Project_check_in_1/data/README.md) for how to download these. To point somewhere else, pass `--data-dir /path/to/data` to `src.train` / `src.evaluate` (in the notebook, change the `data_paths()` call).
+[../Project_check_in_1/data/README.md](../Project_check_in_1/data/README.md) explains how to download these files. If your data lives somewhere else, pass `--data-dir /path/to/data` to `src.train` and `src.evaluate`, and change the `data_paths()` call in the notebook.
 
 ## Reproduce
-All commands run from `Project_check_in_2/` in the `dsan6600` conda env (Python 3.11, torch 2.14):
+Run everything from `Project_check_in_2/` inside the `dsan6600` conda environment (Python 3.11, torch 2.14):
 ```bash
 conda activate dsan6600
 cd Project_check_in_2
@@ -54,4 +54,4 @@ bash scripts/run_extras.sh
 # 4. re-run the results notebook end to end (§5 picks up the extra runs if present)
 jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.kernel_name=dsan6600 notebooks/02_ci2_results.ipynb
 ```
-Useful `src.train` flags: `--hidden`, `--layers`, `--dropout`, `--no-mask` (drop the mask channel), `--seed`, `--max-epochs`, `--device {cuda,mps,cpu}`. See `python -m src.train -h` for the full list. The resolved config is saved to `runs/<run>/config.json`.
+Some handy `src.train` flags are `--hidden`, `--layers`, `--dropout`, `--no-mask` (leave out the mask channel), `--seed`, `--max-epochs` and `--device {cuda,mps,cpu}`. Run `python -m src.train -h` to see all of them. Each run saves its full config to `runs/<run>/config.json`.
