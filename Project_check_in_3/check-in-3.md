@@ -2,9 +2,9 @@
 
 DSAN 6600 · Neural Nets & Advanced Deep Learning · Georgetown · Fall 2026
 
-**Team:** TODO(Mike): names
+**Team:** : Mike Kwon, Jason Wang
 
-**Video:** TODO(Mike): add video link
+**Video:** : add vdeio here
 
 Every number in this write-up comes either from the executed notebook [`notebooks/03_ci3_results.ipynb`](notebooks/03_ci3_results.ipynb) (which also saves them to [`figures/ci3_numbers.json`](figures/ci3_numbers.json)) or from the run logs in [`logs/`](logs/). All CI2 numbers are read from CI2's own files. Figures are in [`figures/`](figures/).
 
