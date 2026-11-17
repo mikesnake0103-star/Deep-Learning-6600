@@ -1,0 +1,13 @@
+overfit check: 200 train windows (41,400 sensor-sequences), 100 steps, dropout 0, no weight decay, device mps
+  step    1  masked MAE 8.737 mph
+  step   10  masked MAE 4.474 mph
+  step   20  masked MAE 3.549 mph
+  step   30  masked MAE 3.861 mph
+  step   40  masked MAE 4.453 mph
+  step   50  masked MAE 4.106 mph
+  step   60  masked MAE 3.583 mph
+  step   70  masked MAE 3.534 mph
+  step   80  masked MAE 4.171 mph
+  step   90  masked MAE 3.481 mph
+  step  100  masked MAE 4.541 mph
+overfit: first 8.737 -> last 4.541 mph (min 3.001)

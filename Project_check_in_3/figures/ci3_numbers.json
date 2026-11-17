@@ -1,0 +1,1420 @@
+{
+ "cost": [
+  {
+   "model": "GRU",
+   "parameters": 51340,
+   "max epochs": 40,
+   "epochs trained": 40,
+   "best epoch": 40,
+   "best val MAE": 3.249,
+   "sec / epoch": 27.323,
+   "train time (min)": 18.217,
+   "inference (s)": 3.841,
+   "final lr": 0.0,
+   "LR cuts": 2
+  },
+  {
+   "model": "GWN no-graph",
+   "parameters": 247724,
+   "max epochs": 48,
+   "epochs trained": 48,
+   "best epoch": 41,
+   "best val MAE": 3.234,
+   "sec / epoch": 65.786,
+   "train time (min)": 52.639,
+   "inference (s)": 4.851,
+   "final lr": 0.0,
+   "LR cuts": 4
+  },
+  {
+   "model": "GWN full",
+   "parameters": 301016,
+   "max epochs": 48,
+   "epochs trained": 36,
+   "best epoch": 28,
+   "best val MAE": 2.781,
+   "sec / epoch": 117.543,
+   "train time (min)": 70.533,
+   "inference (s)": 10.673,
+   "final lr": 0.0,
+   "LR cuts": 2
+  }
+ ],
+ "results": {
+  "Persistence": {
+   "15 min MAE": 3.71,
+   "15 min RMSE": 7.47,
+   "15 min MAPE (%)": 8.94,
+   "30 min MAE": 4.62,
+   "30 min RMSE": 9.64,
+   "30 min MAPE (%)": 11.48,
+   "60 min MAE": 6.14,
+   "60 min RMSE": 12.61,
+   "60 min MAPE (%)": 15.69
+  },
+  "HA": {
+   "15 min MAE": 4.19,
+   "15 min RMSE": 7.86,
+   "15 min MAPE (%)": 13.06,
+   "30 min MAE": 4.19,
+   "30 min RMSE": 7.86,
+   "30 min MAPE (%)": 13.06,
+   "60 min MAE": 4.19,
+   "60 min RMSE": 7.86,
+   "60 min MAPE (%)": 13.06
+  },
+  "GRU": {
+   "15 min MAE": 2.99,
+   "15 min RMSE": 5.89,
+   "15 min MAPE (%)": 8.03,
+   "30 min MAE": 3.6,
+   "30 min RMSE": 7.28,
+   "30 min MAPE (%)": 10.32,
+   "60 min MAE": 4.46,
+   "60 min RMSE": 8.95,
+   "60 min MAPE (%)": 13.76
+  },
+  "GWN no-graph": {
+   "15 min MAE": 2.98,
+   "15 min RMSE": 5.91,
+   "15 min MAPE (%)": 7.92,
+   "30 min MAE": 3.58,
+   "30 min RMSE": 7.3,
+   "30 min MAPE (%)": 10.22,
+   "60 min MAE": 4.44,
+   "60 min RMSE": 8.98,
+   "60 min MAPE (%)": 13.71
+  },
+  "GWN full": {
+   "15 min MAE": 2.7,
+   "15 min RMSE": 5.16,
+   "15 min MAPE (%)": 7.06,
+   "30 min MAE": 3.07,
+   "30 min RMSE": 6.18,
+   "30 min MAPE (%)": 8.46,
+   "60 min MAE": 3.48,
+   "60 min RMSE": 7.23,
+   "60 min MAPE (%)": 9.99
+  }
+ },
+ "delta_15_30_60": {
+  "15 min MAE": {
+   "GWN full - GRU": -0.298,
+   "% change": -9.941,
+   "GWN no-graph - GRU": -0.012,
+   "GWN full - GWN no-graph": -0.286
+  },
+  "15 min RMSE": {
+   "GWN full - GRU": -0.735,
+   "% change": -12.475,
+   "GWN no-graph - GRU": 0.017,
+   "GWN full - GWN no-graph": -0.752
+  },
+  "15 min MAPE (%)": {
+   "GWN full - GRU": -0.973,
+   "% change": -12.118,
+   "GWN no-graph - GRU": -0.113,
+   "GWN full - GWN no-graph": -0.86
+  },
+  "30 min MAE": {
+   "GWN full - GRU": -0.53,
+   "% change": -14.729,
+   "GWN no-graph - GRU": -0.015,
+   "GWN full - GWN no-graph": -0.515
+  },
+  "30 min RMSE": {
+   "GWN full - GRU": -1.099,
+   "% change": -15.101,
+   "GWN no-graph - GRU": 0.023,
+   "GWN full - GWN no-graph": -1.122
+  },
+  "30 min MAPE (%)": {
+   "GWN full - GRU": -1.861,
+   "% change": -18.027,
+   "GWN no-graph - GRU": -0.105,
+   "GWN full - GWN no-graph": -1.757
+  },
+  "60 min MAE": {
+   "GWN full - GRU": -0.985,
+   "% change": -22.05,
+   "GWN no-graph - GRU": -0.027,
+   "GWN full - GWN no-graph": -0.958
+  },
+  "60 min RMSE": {
+   "GWN full - GRU": -1.715,
+   "% change": -19.167,
+   "GWN no-graph - GRU": 0.027,
+   "GWN full - GWN no-graph": -1.742
+  },
+  "60 min MAPE (%)": {
+   "GWN full - GRU": -3.768,
+   "% change": -27.384,
+   "GWN no-graph - GRU": -0.045,
+   "GWN full - GWN no-graph": -3.722
+  }
+ },
+ "gap_to_published_gwn_mae": {
+  "15 min": 0.01,
+  "30 min": -0.0,
+  "60 min": -0.05
+ },
+ "mae_by_horizon": {
+  "Persistence": {
+   "5": 2.887,
+   "10": 3.353,
+   "15": 3.715,
+   "20": 4.036,
+   "25": 4.335,
+   "30": 4.619,
+   "35": 4.893,
+   "40": 5.156,
+   "45": 5.407,
+   "50": 5.656,
+   "55": 5.9,
+   "60": 6.143
+  },
+  "HA": {
+   "5": 4.193,
+   "10": 4.193,
+   "15": 4.193,
+   "20": 4.193,
+   "25": 4.193,
+   "30": 4.193,
+   "35": 4.193,
+   "40": 4.193,
+   "45": 4.193,
+   "50": 4.193,
+   "55": 4.193,
+   "60": 4.193
+  },
+  "GRU": {
+   "5": 2.381,
+   "10": 2.732,
+   "15": 2.994,
+   "20": 3.216,
+   "25": 3.414,
+   "30": 3.599,
+   "35": 3.77,
+   "40": 3.926,
+   "45": 4.072,
+   "50": 4.207,
+   "55": 4.338,
+   "60": 4.465
+  },
+  "GWN no-graph": {
+   "5": 2.37,
+   "10": 2.722,
+   "15": 2.982,
+   "20": 3.203,
+   "25": 3.399,
+   "30": 3.584,
+   "35": 3.752,
+   "40": 3.908,
+   "45": 4.051,
+   "50": 4.186,
+   "55": 4.315,
+   "60": 4.438
+  },
+  "GWN full": {
+   "5": 2.235,
+   "10": 2.511,
+   "15": 2.697,
+   "20": 2.846,
+   "25": 2.965,
+   "30": 3.069,
+   "35": 3.158,
+   "40": 3.237,
+   "45": 3.306,
+   "50": 3.367,
+   "55": 3.422,
+   "60": 3.48
+  },
+  "GWN full - GRU": {
+   "5": -0.146,
+   "10": -0.221,
+   "15": -0.298,
+   "20": -0.37,
+   "25": -0.449,
+   "30": -0.53,
+   "35": -0.612,
+   "40": -0.688,
+   "45": -0.766,
+   "50": -0.841,
+   "55": -0.916,
+   "60": -0.985
+  },
+  "% change": {
+   "5": -6.147,
+   "10": -8.088,
+   "15": -9.941,
+   "20": -11.502,
+   "25": -13.153,
+   "30": -14.729,
+   "35": -16.231,
+   "40": -17.537,
+   "45": -18.815,
+   "50": -19.977,
+   "55": -21.119,
+   "60": -22.05
+  }
+ },
+ "below_ha_until_min": {
+  "GWN full": 60,
+  "GRU": 45
+ },
+ "share_sensors": [
+  {
+   "horizon": "15 min",
+   "GWN full beats GRU": 0.995,
+   "GWN no-graph beats GRU": 0.744,
+   "GWN full beats GWN no-graph": 0.995,
+   "median change (mph)": -0.258,
+   "largest gain (mph)": -1.206,
+   "largest loss (mph)": 0.027
+  },
+  {
+   "horizon": "30 min",
+   "GWN full beats GRU": 0.995,
+   "GWN no-graph beats GRU": 0.686,
+   "GWN full beats GWN no-graph": 0.995,
+   "median change (mph)": -0.486,
+   "largest gain (mph)": -1.992,
+   "largest loss (mph)": 0.003
+  },
+  {
+   "horizon": "60 min",
+   "GWN full beats GRU": 1.0,
+   "GWN no-graph beats GRU": 0.749,
+   "GWN full beats GWN no-graph": 1.0,
+   "median change (mph)": -0.928,
+   "largest gain (mph)": -3.736,
+   "largest loss (mph)": -0.053
+  }
+ ],
+ "regime": [
+  {
+   "horizon": "15 min",
+   "regime": "congested (<40)",
+   "share of targets": 0.12,
+   "Persistence": 7.34,
+   "HA": 12.9,
+   "GRU": 7.45,
+   "GWN no-graph": 7.35,
+   "GWN full": 6.36
+  },
+  {
+   "horizon": "15 min",
+   "regime": "free-flow (>=40)",
+   "share of targets": 0.88,
+   "Persistence": 3.2,
+   "HA": 2.96,
+   "GRU": 2.37,
+   "GWN no-graph": 2.37,
+   "GWN full": 2.18
+  },
+  {
+   "horizon": "30 min",
+   "regime": "congested (<40)",
+   "share of targets": 0.12,
+   "Persistence": 9.67,
+   "HA": 12.9,
+   "GRU": 10.18,
+   "GWN no-graph": 10.09,
+   "GWN full": 7.97
+  },
+  {
+   "horizon": "30 min",
+   "regime": "free-flow (>=40)",
+   "share of targets": 0.88,
+   "Persistence": 3.91,
+   "HA": 2.96,
+   "GRU": 2.67,
+   "GWN no-graph": 2.67,
+   "GWN full": 2.38
+  },
+  {
+   "horizon": "60 min",
+   "regime": "congested (<40)",
+   "share of targets": 0.12,
+   "Persistence": 13.42,
+   "HA": 12.9,
+   "GRU": 14.46,
+   "GWN no-graph": 14.46,
+   "GWN full": 9.7
+  },
+  {
+   "horizon": "60 min",
+   "regime": "free-flow (>=40)",
+   "share of targets": 0.88,
+   "Persistence": 5.12,
+   "HA": 2.96,
+   "GRU": 3.06,
+   "GWN no-graph": 3.02,
+   "GWN full": 2.6
+  }
+ ],
+ "ablation": [
+  {
+   "slice": "all horizons",
+   "GRU": 3.593,
+   "GWN no-graph": 3.576,
+   "GWN full": 3.024,
+   "total gain": 0.568,
+   "from architecture": 0.017,
+   "from graph": 0.551,
+   "graph share of gain": 0.97
+  },
+  {
+   "slice": "15 min",
+   "GRU": 2.994,
+   "GWN no-graph": 2.982,
+   "GWN full": 2.697,
+   "total gain": 0.298,
+   "from architecture": 0.012,
+   "from graph": 0.286,
+   "graph share of gain": 0.959
+  },
+  {
+   "slice": "30 min",
+   "GRU": 3.599,
+   "GWN no-graph": 3.584,
+   "GWN full": 3.069,
+   "total gain": 0.53,
+   "from architecture": 0.015,
+   "from graph": 0.515,
+   "graph share of gain": 0.971
+  },
+  {
+   "slice": "60 min",
+   "GRU": 4.465,
+   "GWN no-graph": 4.438,
+   "GWN full": 3.48,
+   "total gain": 0.985,
+   "from architecture": 0.027,
+   "from graph": 0.958,
+   "graph share of gain": 0.973
+  },
+  {
+   "slice": "15 min, congested",
+   "GRU": 7.448,
+   "GWN no-graph": 7.35,
+   "GWN full": 6.364,
+   "total gain": 1.084,
+   "from architecture": 0.098,
+   "from graph": 0.986,
+   "graph share of gain": 0.91
+  },
+  {
+   "slice": "30 min, congested",
+   "GRU": 10.182,
+   "GWN no-graph": 10.085,
+   "GWN full": 7.975,
+   "total gain": 2.208,
+   "from architecture": 0.097,
+   "from graph": 2.111,
+   "graph share of gain": 0.956
+  },
+  {
+   "slice": "60 min, congested",
+   "GRU": 14.456,
+   "GWN no-graph": 14.461,
+   "GWN full": 9.704,
+   "total gain": 4.752,
+   "from architecture": -0.005,
+   "from graph": 4.757,
+   "graph share of gain": 1.001
+  },
+  {
+   "slice": "15 min, free-flow",
+   "GRU": 2.366,
+   "GWN no-graph": 2.366,
+   "GWN full": 2.179,
+   "total gain": 0.187,
+   "from architecture": 0.0,
+   "from graph": 0.187,
+   "graph share of gain": 1.0
+  },
+  {
+   "slice": "30 min, free-flow",
+   "GRU": 2.67,
+   "GWN no-graph": 2.666,
+   "GWN full": 2.377,
+   "total gain": 0.293,
+   "from architecture": 0.004,
+   "from graph": 0.29,
+   "graph share of gain": 0.987
+  },
+  {
+   "slice": "60 min, free-flow",
+   "GRU": 3.056,
+   "GWN no-graph": 3.024,
+   "GWN full": 2.602,
+   "total gain": 0.453,
+   "from architecture": 0.031,
+   "from graph": 0.422,
+   "graph share of gain": 0.931
+  }
+ ],
+ "error_corr_with_GRU": {
+  "GWN no-graph": 0.989,
+  "GWN full": 0.73
+ },
+ "pred_min_max_mph": {
+  "GRU": [
+   2.3,
+   74.8
+  ],
+  "GWN no-graph": [
+   1.6,
+   72.9
+  ],
+  "GWN full": [
+   -3.9,
+   73.0
+  ]
+ },
+ "tod": {
+  "GRU": {
+   "wd_peak_hour": 16,
+   "wd_peak_mae": 7.56,
+   "wd_night_0_4": 2.97,
+   "wd_am_7_9": 6.67,
+   "wd_pm_15_18": 7.34,
+   "wd_mean": 4.67,
+   "we_mean": 3.42,
+   "weekday_hours_worse_than_HA": [
+    1,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    11,
+    15,
+    16,
+    17,
+    19,
+    20,
+    21
+   ]
+  },
+  "GWN no-graph": {
+   "wd_peak_hour": 16,
+   "wd_peak_mae": 7.52,
+   "wd_night_0_4": 2.97,
+   "wd_am_7_9": 6.61,
+   "wd_pm_15_18": 7.33,
+   "wd_mean": 4.65,
+   "we_mean": 3.37,
+   "weekday_hours_worse_than_HA": [
+    1,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    11,
+    15,
+    16,
+    17,
+    19,
+    20,
+    21
+   ]
+  },
+  "GWN full": {
+   "wd_peak_hour": 18,
+   "wd_peak_mae": 6.23,
+   "wd_night_0_4": 2.68,
+   "wd_am_7_9": 4.52,
+   "wd_pm_15_18": 5.47,
+   "wd_mean": 3.56,
+   "we_mean": 3.03,
+   "weekday_hours_worse_than_HA": []
+  },
+  "weekday_gain_by_hour": {
+   "0": 0.21,
+   "1": 0.22,
+   "2": 0.2,
+   "3": 0.35,
+   "4": 0.45,
+   "5": 0.61,
+   "6": 2.18,
+   "7": 3.23,
+   "8": 1.81,
+   "9": 1.42,
+   "10": 1.21,
+   "11": 0.95,
+   "12": 0.51,
+   "13": 0.63,
+   "14": 0.76,
+   "15": 1.9,
+   "16": 2.41,
+   "17": 1.87,
+   "18": 1.29,
+   "19": 2.15,
+   "20": 1.44,
+   "21": 0.46,
+   "22": 0.13,
+   "23": 0.24
+  }
+ },
+ "drop_duration_steps": {
+  "GWN full crosses": 9.0,
+  "GWN full never crosses": 3.0,
+  "GRU crosses": 9.0,
+  "GRU never crosses": 2.0
+ },
+ "drop_lag": {
+  "events": 9974,
+  "sensors": 207,
+  "table": [
+   {
+    "model": "Persistence",
+    "horizon (min)": 15,
+    "events": 9974,
+    "never crosses": 0.02,
+    "median lag (steps)": 3.0,
+    "mean lag (steps)": 2.07,
+    "IQR": "3-3",
+    "lag < horizon": 0.13,
+    "crosses with lag < horizon (all events)": 0.12,
+    "MAE in [t0, t0+60]": 10.0
+   },
+   {
+    "model": "Persistence",
+    "horizon (min)": 60,
+    "events": 9974,
+    "never crosses": 0.02,
+    "median lag (steps)": 12.0,
+    "mean lag (steps)": 6.99,
+    "IQR": "0-12",
+    "lag < horizon": 0.36,
+    "crosses with lag < horizon (all events)": 0.35,
+    "MAE in [t0, t0+60]": 16.77
+   },
+   {
+    "model": "GRU",
+    "horizon (min)": 15,
+    "events": 9974,
+    "never crosses": 0.25,
+    "median lag (steps)": 3.0,
+    "mean lag (steps)": 4.24,
+    "IQR": "3-4",
+    "lag < horizon": 0.09,
+    "crosses with lag < horizon (all events)": 0.07,
+    "MAE in [t0, t0+60]": 9.57
+   },
+   {
+    "model": "GRU",
+    "horizon (min)": 60,
+    "events": 9974,
+    "never crosses": 0.4,
+    "median lag (steps)": 12.0,
+    "mean lag (steps)": 9.83,
+    "IQR": "9-13",
+    "lag < horizon": 0.33,
+    "crosses with lag < horizon (all events)": 0.2,
+    "MAE in [t0, t0+60]": 15.99
+   },
+   {
+    "model": "GWN no-graph",
+    "horizon (min)": 15,
+    "events": 9974,
+    "never crosses": 0.22,
+    "median lag (steps)": 3.0,
+    "mean lag (steps)": 4.0,
+    "IQR": "3-4",
+    "lag < horizon": 0.11,
+    "crosses with lag < horizon (all events)": 0.09,
+    "MAE in [t0, t0+60]": 9.51
+   },
+   {
+    "model": "GWN no-graph",
+    "horizon (min)": 60,
+    "events": 9974,
+    "never crosses": 0.41,
+    "median lag (steps)": 12.0,
+    "mean lag (steps)": 9.59,
+    "IQR": "7-13",
+    "lag < horizon": 0.37,
+    "crosses with lag < horizon (all events)": 0.22,
+    "MAE in [t0, t0+60]": 15.97
+   },
+   {
+    "model": "GWN full",
+    "horizon (min)": 15,
+    "events": 9974,
+    "never crosses": 0.36,
+    "median lag (steps)": 3.0,
+    "mean lag (steps)": 3.43,
+    "IQR": "1-4",
+    "lag < horizon": 0.41,
+    "crosses with lag < horizon (all events)": 0.27,
+    "MAE in [t0, t0+60]": 7.87
+   },
+   {
+    "model": "GWN full",
+    "horizon (min)": 60,
+    "events": 9974,
+    "never crosses": 0.48,
+    "median lag (steps)": 4.0,
+    "mean lag (steps)": 4.5,
+    "IQR": "-1-11",
+    "lag < horizon": 0.77,
+    "crosses with lag < horizon (all events)": 0.4,
+    "MAE in [t0, t0+60]": 11.14
+   }
+  ]
+ },
+ "missing": [
+  {
+   "missing input steps": "0",
+   "horizon (min)": 15,
+   "share of targets": 0.94,
+   "Persistence": 3.45,
+   "HA": 4.15,
+   "GRU": 2.94,
+   "GWN no-graph": 2.93,
+   "GWN full": 2.65
+  },
+  {
+   "missing input steps": "0",
+   "horizon (min)": 60,
+   "share of targets": 0.93,
+   "Persistence": 5.31,
+   "HA": 4.15,
+   "GRU": 4.38,
+   "GWN no-graph": 4.35,
+   "GWN full": 3.38
+  },
+  {
+   "missing input steps": "1-3",
+   "horizon (min)": 15,
+   "share of targets": 0.03,
+   "Persistence": 3.8,
+   "HA": 4.68,
+   "GRU": 3.29,
+   "GWN no-graph": 3.26,
+   "GWN full": 2.96
+  },
+  {
+   "missing input steps": "1-3",
+   "horizon (min)": 60,
+   "share of targets": 0.03,
+   "Persistence": 5.28,
+   "HA": 4.46,
+   "GRU": 4.42,
+   "GWN no-graph": 4.39,
+   "GWN full": 3.48
+  },
+  {
+   "missing input steps": "4-6",
+   "horizon (min)": 15,
+   "share of targets": 0.01,
+   "Persistence": 3.93,
+   "HA": 5.54,
+   "GRU": 3.57,
+   "GWN no-graph": 3.56,
+   "GWN full": 3.18
+  },
+  {
+   "missing input steps": "4-6",
+   "horizon (min)": 60,
+   "share of targets": 0.01,
+   "Persistence": 6.32,
+   "HA": 5.42,
+   "GRU": 5.56,
+   "GWN no-graph": 5.57,
+   "GWN full": 4.43
+  },
+  {
+   "missing input steps": "7-11",
+   "horizon (min)": 15,
+   "share of targets": 0.01,
+   "Persistence": 4.2,
+   "HA": 4.66,
+   "GRU": 3.79,
+   "GWN no-graph": 3.82,
+   "GWN full": 3.55
+  },
+  {
+   "missing input steps": "7-11",
+   "horizon (min)": 60,
+   "share of targets": 0.01,
+   "Persistence": 6.21,
+   "HA": 4.81,
+   "GRU": 5.3,
+   "GWN no-graph": 5.42,
+   "GWN full": 4.62
+  },
+  {
+   "missing input steps": "12 (all)",
+   "horizon (min)": 15,
+   "share of targets": 0.0,
+   "Persistence": 59.14,
+   "HA": 4.56,
+   "GRU": 8.29,
+   "GWN no-graph": 8.26,
+   "GWN full": 7.25
+  },
+  {
+   "missing input steps": "12 (all)",
+   "horizon (min)": 60,
+   "share of targets": 0.01,
+   "Persistence": 59.54,
+   "HA": 4.38,
+   "GRU": 8.27,
+   "GWN no-graph": 7.82,
+   "GWN full": 7.48
+  }
+ ],
+ "all_missing_split_60": [
+  {
+   "all 12 own inputs missing, and": "network also down (>90% of sensors missing)",
+   "targets": 15665,
+   "Persistence": 60.23,
+   "HA": 4.18,
+   "GRU": 7.88,
+   "GWN no-graph": 7.33,
+   "GWN full": 7.74
+  },
+  {
+   "all 12 own inputs missing, and": "only some sensors down (<=90% missing)",
+   "targets": 2751,
+   "Persistence": 55.6,
+   "HA": 5.53,
+   "GRU": 10.54,
+   "GWN no-graph": 10.6,
+   "GWN full": 5.99
+  }
+ ],
+ "ci2_worst10": {
+  "table": [
+   {
+    "sensor_id": "717462",
+    "GRU 60": 10.08,
+    "GWN no-graph 60": 9.93,
+    "GWN full 60": 7.58,
+    "HA": 11.75,
+    "share <40 mph": 0.4,
+    "test missing rate": 0.1,
+    "in-degree": 14,
+    "out-degree": 13,
+    "change (GWN full - GRU)": -2.5
+   },
+   {
+    "sensor_id": "718045",
+    "GRU 60": 9.91,
+    "GWN no-graph 60": 9.85,
+    "GWN full 60": 6.93,
+    "HA": 7.52,
+    "share <40 mph": 0.3,
+    "test missing rate": 0.14,
+    "in-degree": 6,
+    "out-degree": 14,
+    "change (GWN full - GRU)": -2.98
+   },
+   {
+    "sensor_id": "717461",
+    "GRU 60": 9.81,
+    "GWN no-graph 60": 9.76,
+    "GWN full 60": 6.85,
+    "HA": 10.01,
+    "share <40 mph": 0.48,
+    "test missing rate": 0.2,
+    "in-degree": 17,
+    "out-degree": 11,
+    "change (GWN full - GRU)": -2.96
+   },
+   {
+    "sensor_id": "717458",
+    "GRU 60": 9.68,
+    "GWN no-graph 60": 9.65,
+    "GWN full 60": 6.41,
+    "HA": 9.04,
+    "share <40 mph": 0.5,
+    "test missing rate": 0.1,
+    "in-degree": 13,
+    "out-degree": 15,
+    "change (GWN full - GRU)": -3.27
+   },
+   {
+    "sensor_id": "773939",
+    "GRU 60": 9.53,
+    "GWN no-graph 60": 9.58,
+    "GWN full 60": 6.92,
+    "HA": 9.91,
+    "share <40 mph": 0.25,
+    "test missing rate": 0.1,
+    "in-degree": 3,
+    "out-degree": 3,
+    "change (GWN full - GRU)": -2.61
+   },
+   {
+    "sensor_id": "717466",
+    "GRU 60": 9.15,
+    "GWN no-graph 60": 9.08,
+    "GWN full 60": 7.3,
+    "HA": 11.95,
+    "share <40 mph": 0.32,
+    "test missing rate": 0.1,
+    "in-degree": 14,
+    "out-degree": 11,
+    "change (GWN full - GRU)": -1.85
+   },
+   {
+    "sensor_id": "717468",
+    "GRU 60": 9.14,
+    "GWN no-graph 60": 9.12,
+    "GWN full 60": 7.27,
+    "HA": 12.76,
+    "share <40 mph": 0.28,
+    "test missing rate": 0.1,
+    "in-degree": 14,
+    "out-degree": 14,
+    "change (GWN full - GRU)": -1.87
+   },
+   {
+    "sensor_id": "716339",
+    "GRU 60": 9.02,
+    "GWN no-graph 60": 8.74,
+    "GWN full 60": 5.28,
+    "HA": 7.13,
+    "share <40 mph": 0.56,
+    "test missing rate": 0.1,
+    "in-degree": 15,
+    "out-degree": 13,
+    "change (GWN full - GRU)": -3.74
+   },
+   {
+    "sensor_id": "717472",
+    "GRU 60": 8.65,
+    "GWN no-graph 60": 8.67,
+    "GWN full 60": 6.48,
+    "HA": 12.36,
+    "share <40 mph": 0.25,
+    "test missing rate": 0.13,
+    "in-degree": 10,
+    "out-degree": 12,
+    "change (GWN full - GRU)": -2.17
+   },
+   {
+    "sensor_id": "716958",
+    "GRU 60": 8.08,
+    "GWN no-graph 60": 8.16,
+    "GWN full 60": 6.97,
+    "HA": 8.04,
+    "share <40 mph": 0.25,
+    "test missing rate": 0.14,
+    "in-degree": 5,
+    "out-degree": 8,
+    "change (GWN full - GRU)": -1.11
+   }
+  ],
+  "mean_GRU": 9.3,
+  "mean_GWN_nograph": 9.25,
+  "mean_GWN_full": 6.8,
+  "improved": 10,
+  "share_of_abs_err_GRU": 0.101,
+  "share_of_abs_err_GWN_full": 0.094,
+  "mean_change_worst10": -2.51,
+  "mean_change_others": -0.91
+ },
+ "per_sensor": {
+  "GWN_full": {
+   "min": 1.09,
+   "median": 3.13,
+   "p90": 5.72,
+   "max": 7.58
+  },
+  "GRU": {
+   "min": 1.3,
+   "median": 4.21,
+   "p90": 7.03,
+   "max": 10.08
+  },
+  "spearman": {
+   "GRU 60": {
+    "share <40 mph": 0.89,
+    "test missing rate": 0.13,
+    "in-degree": 0.17,
+    "out-degree": 0.18
+   },
+   "GWN full 60": {
+    "share <40 mph": 0.81,
+    "test missing rate": 0.16,
+    "in-degree": 0.14,
+    "out-degree": 0.09
+   },
+   "change (GWN full - GRU)": {
+    "share <40 mph": -0.84,
+    "test missing rate": -0.01,
+    "in-degree": -0.27,
+    "out-degree": -0.41
+   }
+  }
+ },
+ "neighbor_events": [
+  {
+   "events": "all 892 events",
+   "n": 892,
+   "GRU 60": 24.793,
+   "GWN no-graph 60": 24.782,
+   "GWN full 60": 16.473,
+   "graph effect (full - no-graph)": -8.308,
+   "full beats no-graph": 0.784,
+   "full beats GRU": 0.765,
+   "GRU bias at t0": 25.546,
+   "GWN no-graph bias at t0": 25.539,
+   "GWN full bias at t0": 17.398
+  },
+  {
+   "events": "a neighbour dropped earlier",
+   "n": 796,
+   "GRU 60": 25.086,
+   "GWN no-graph 60": 25.023,
+   "GWN full 60": 16.313,
+   "graph effect (full - no-graph)": -8.711,
+   "full beats no-graph": 0.791,
+   "full beats GRU": 0.771,
+   "GRU bias at t0": 25.681,
+   "GWN no-graph bias at t0": 25.625,
+   "GWN full bias at t0": 16.939
+  },
+  {
+   "events": "no neighbour dropped earlier",
+   "n": 96,
+   "GRU 60": 22.367,
+   "GWN no-graph 60": 22.778,
+   "GWN full 60": 17.807,
+   "graph effect (full - no-graph)": -4.971,
+   "full beats no-graph": 0.719,
+   "full beats GRU": 0.708,
+   "GRU bias at t0": 24.426,
+   "GWN no-graph bias at t0": 24.83,
+   "GWN full bias at t0": 21.201
+  },
+  {
+   "events": "an out-of-i neighbour dropped earlier",
+   "n": 727,
+   "GRU 60": 25.749,
+   "GWN no-graph 60": 25.679,
+   "GWN full 60": 16.352,
+   "graph effect (full - no-graph)": -9.326,
+   "full beats no-graph": 0.809,
+   "full beats GRU": 0.784,
+   "GRU bias at t0": 25.748,
+   "GWN no-graph bias at t0": 25.652,
+   "GWN full bias at t0": 16.462
+  },
+  {
+   "events": "no out-of-i neighbour dropped earlier",
+   "n": 165,
+   "GRU 60": 20.581,
+   "GWN no-graph 60": 20.829,
+   "GWN full 60": 17.007,
+   "graph effect (full - no-graph)": -3.822,
+   "full beats no-graph": 0.673,
+   "full beats GRU": 0.679,
+   "GRU bias at t0": 24.657,
+   "GWN no-graph bias at t0": 25.045,
+   "GWN full bias at t0": 21.52
+  }
+ ],
+ "neighbor_events_graph_effect": {
+  "mean": -8.308,
+  "ci_low": -9.173,
+  "ci_high": -7.5
+ },
+ "qualitative_ci2": [
+  {
+   "case": "(a) GRU does well",
+   "sensor_id": "718076",
+   "date": "2012-06-22 (Fri)",
+   "HA MAE 15min": 1.66,
+   "GRU MAE 15min": 1.31,
+   "GWN full MAE 15min": 1.27,
+   "HA MAE 60min": 1.66,
+   "GRU MAE 60min": 1.36,
+   "GWN full MAE 60min": 1.33
+  },
+  {
+   "case": "(b) sudden congestion onset",
+   "sensor_id": "716571",
+   "date": "2012-06-15 (Fri)",
+   "HA MAE 15min": 2.57,
+   "GRU MAE 15min": 2.75,
+   "GWN full MAE 15min": 2.59,
+   "HA MAE 60min": 2.57,
+   "GRU MAE 60min": 3.32,
+   "GWN full MAE 60min": 2.64
+  },
+  {
+   "case": "(c) right after network outage",
+   "sensor_id": "717461",
+   "date": "2012-06-18 (Mon)",
+   "HA MAE 15min": 20.59,
+   "GRU MAE 15min": 7.43,
+   "GWN full MAE 15min": 5.14,
+   "HA MAE 60min": 20.59,
+   "GRU MAE 60min": 13.21,
+   "GWN full MAE 60min": 8.38
+  }
+ ],
+ "qualitative_gwn_failures": [
+  {
+   "case": "(d) worst GWN day",
+   "in-degree": 3,
+   "out-degree": 6,
+   "day observed": 1.0,
+   "min speed": 5.4,
+   "largest gap below HA (mph)": 57.5,
+   "sensor share <40 mph (test)": 0.199,
+   "event time": "2012-06-13 14:20",
+   "truth / GWN / GRU at event": "7.9 / 62.2 / 21.4",
+   "own input missing": 0.0,
+   "own input min speed": 15.7,
+   "neighbour input min speed": 11.0,
+   "neighbours <40 mph in input": 3,
+   "sensor_id": "716960",
+   "date": "2012-06-13 (Wed)",
+   "HA MAE 15min": 15.02,
+   "GRU MAE 15min": 7.5,
+   "GWN full MAE 15min": 7.13,
+   "HA MAE 60min": 15.02,
+   "GRU MAE 60min": 11.08,
+   "GWN full MAE 60min": 12.82
+  },
+  {
+   "case": "(e) GWN worse than GRU by most",
+   "in-degree": 1,
+   "out-degree": 6,
+   "day observed": 1.0,
+   "min speed": 7.9,
+   "largest gap below HA (mph)": 15.1,
+   "sensor share <40 mph (test)": 0.079,
+   "event time": "2012-06-26 07:10",
+   "truth / GWN / GRU at event": "62.5 / 22.2 / 63.7",
+   "own input missing": 0.0,
+   "own input min speed": 65.4,
+   "neighbour input min speed": 31.2,
+   "neighbours <40 mph in input": 1,
+   "sensor_id": "773012",
+   "date": "2012-06-26 (Tue)",
+   "HA MAE 15min": 19.11,
+   "GRU MAE 15min": 2.4,
+   "GWN full MAE 15min": 3.73,
+   "HA MAE 60min": 19.11,
+   "GRU MAE 60min": 5.13,
+   "GWN full MAE 60min": 8.14
+  },
+  {
+   "case": "(f) largest single GWN error",
+   "in-degree": 1,
+   "out-degree": 3,
+   "day observed": 1.0,
+   "min speed": 4.0,
+   "largest gap below HA (mph)": 64.1,
+   "sensor share <40 mph (test)": 0.002,
+   "event time": "2012-06-15 17:40",
+   "truth / GWN / GRU at event": "4.0 / 69.0 / 68.8",
+   "own input missing": 0.0,
+   "own input min speed": 61.4,
+   "neighbour input min speed": 5.2,
+   "neighbours <40 mph in input": 1,
+   "sensor_id": "716571",
+   "date": "2012-06-15 (Fri)",
+   "HA MAE 15min": 2.57,
+   "GRU MAE 15min": 2.75,
+   "GWN full MAE 15min": 2.59,
+   "HA MAE 60min": 2.57,
+   "GRU MAE 60min": 3.32,
+   "GWN full MAE 60min": 2.64
+  }
+ ],
+ "gwn_top1pct": {
+  "threshold_mph": 35.5,
+  "n": 12426,
+  "share_of_abs_error": 0.124,
+  "table": [
+   {
+    "condition": "target is congested (<40 mph)",
+    "share of top 1% GWN errors": 0.697,
+    "share of all targets": 0.124,
+    "lift": 5.636
+   },
+   {
+    "condition": "truth at least 20 mph below HA (unusual slowdown)",
+    "share of top 1% GWN errors": 0.628,
+    "share of all targets": 0.031,
+    "lift": 20.564
+   },
+   {
+    "condition": "truth at least 20 mph above HA (unusual free flow)",
+    "share of top 1% GWN errors": 0.143,
+    "share of all targets": 0.01,
+    "lift": 14.143
+   },
+   {
+    "condition": "sharp drop (>15 mph / 30 min) in the hour before the target",
+    "share of top 1% GWN errors": 0.67,
+    "share of all targets": 0.117,
+    "lift": 5.742
+   },
+   {
+    "condition": "all 12 own input steps missing",
+    "share of top 1% GWN errors": 0.089,
+    "share of all targets": 0.015,
+    "lift": 5.989
+   },
+   {
+    "condition": "network-wide outage in the input (>90% sensors missing)",
+    "share of top 1% GWN errors": 0.081,
+    "share of all targets": 0.013,
+    "lift": 6.434
+   },
+   {
+    "condition": "GWN over-predicts (misses a slowdown)",
+    "share of top 1% GWN errors": 0.697,
+    "share of all targets": 0.512,
+    "lift": 1.361
+   },
+   {
+    "condition": "GRU error is also in its own top 1%",
+    "share of top 1% GWN errors": 0.435,
+    "share of all targets": 0.01,
+    "lift": 43.47
+   },
+   {
+    "condition": "weekend",
+    "share of top 1% GWN errors": 0.229,
+    "share of all targets": 0.205,
+    "lift": 1.118
+   }
+  ]
+ },
+ "drop_visibility": [
+  {
+   "congested target after a sharp drop, and": "own input already slow",
+   "targets": 41786,
+   "HA": 15.28,
+   "GRU": 13.99,
+   "GWN no-graph": 14.07,
+   "GWN full": 10.84,
+   "graph effect (full - no-graph)": -3.23
+  },
+  {
+   "congested target after a sharp drop, and": "own input fast, a graph neighbour already slow",
+   "targets": 24569,
+   "HA": 17.79,
+   "GRU": 31.73,
+   "GWN no-graph": 31.65,
+   "GWN full": 18.02,
+   "graph effect (full - no-graph)": -13.63
+  },
+  {
+   "congested target after a sharp drop, and": "own input fast, no neighbour slow (nothing to see)",
+   "targets": 9039,
+   "HA": 14.83,
+   "GRU": 33.85,
+   "GWN no-graph": 33.49,
+   "GWN full": 17.07,
+   "graph effect (full - no-graph)": -16.42
+  }
+ ],
+ "gwn_worst10": {
+  "table": [
+   {
+    "sensor_id": "717462",
+    "GWN full 60": 7.58,
+    "GRU 60": 10.08,
+    "HA": 11.75,
+    "share <40 mph": 0.4,
+    "test missing rate": 0.1,
+    "in-degree": 14,
+    "out-degree": 13
+   },
+   {
+    "sensor_id": "716960",
+    "GWN full 60": 7.32,
+    "GRU 60": 8.03,
+    "HA": 8.44,
+    "share <40 mph": 0.2,
+    "test missing rate": 0.14,
+    "in-degree": 3,
+    "out-degree": 6
+   },
+   {
+    "sensor_id": "717466",
+    "GWN full 60": 7.3,
+    "GRU 60": 9.15,
+    "HA": 11.95,
+    "share <40 mph": 0.32,
+    "test missing rate": 0.1,
+    "in-degree": 14,
+    "out-degree": 11
+   },
+   {
+    "sensor_id": "717468",
+    "GWN full 60": 7.27,
+    "GRU 60": 9.14,
+    "HA": 12.76,
+    "share <40 mph": 0.28,
+    "test missing rate": 0.1,
+    "in-degree": 14,
+    "out-degree": 14
+   },
+   {
+    "sensor_id": "716958",
+    "GWN full 60": 6.97,
+    "GRU 60": 8.08,
+    "HA": 8.04,
+    "share <40 mph": 0.25,
+    "test missing rate": 0.14,
+    "in-degree": 5,
+    "out-degree": 8
+   },
+   {
+    "sensor_id": "718045",
+    "GWN full 60": 6.93,
+    "GRU 60": 9.91,
+    "HA": 7.52,
+    "share <40 mph": 0.3,
+    "test missing rate": 0.14,
+    "in-degree": 6,
+    "out-degree": 14
+   },
+   {
+    "sensor_id": "773939",
+    "GWN full 60": 6.92,
+    "GRU 60": 9.53,
+    "HA": 9.91,
+    "share <40 mph": 0.25,
+    "test missing rate": 0.1,
+    "in-degree": 3,
+    "out-degree": 3
+   },
+   {
+    "sensor_id": "717461",
+    "GWN full 60": 6.85,
+    "GRU 60": 9.81,
+    "HA": 10.01,
+    "share <40 mph": 0.48,
+    "test missing rate": 0.2,
+    "in-degree": 17,
+    "out-degree": 11
+   },
+   {
+    "sensor_id": "717472",
+    "GWN full 60": 6.48,
+    "GRU 60": 8.65,
+    "HA": 12.36,
+    "share <40 mph": 0.25,
+    "test missing rate": 0.13,
+    "in-degree": 10,
+    "out-degree": 12
+   },
+   {
+    "sensor_id": "717458",
+    "GWN full 60": 6.41,
+    "GRU 60": 9.68,
+    "HA": 9.04,
+    "share <40 mph": 0.5,
+    "test missing rate": 0.1,
+    "in-degree": 13,
+    "out-degree": 15
+   }
+  ],
+  "overlap_with_ci2_worst10": [
+   "716958",
+   "717458",
+   "717461",
+   "717462",
+   "717466",
+   "717468",
+   "717472",
+   "718045",
+   "773939"
+  ],
+  "median_degree": {
+   "GWN worst 10": {
+    "in-degree": 11.5,
+    "out-degree": 11.5,
+    "degree": 23.5
+   },
+   "all sensors": {
+    "in-degree": 7.0,
+    "out-degree": 7.0,
+    "degree": 15.0
+   }
+  },
+  "degree_groups": [
+   {
+    "index": "lowest-degree quarter",
+    "sensors": 56,
+    "GRU 60": 4.115,
+    "GWN no-graph 60": 4.092,
+    "GWN full 60": 3.379,
+    "share <40 mph": 0.08,
+    "graph effect (full - no-graph)": -0.713
+   },
+   {
+    "index": "highest-degree quarter",
+    "sensors": 52,
+    "GRU 60": 5.377,
+    "GWN no-graph 60": 5.342,
+    "GWN full 60": 3.942,
+    "share <40 mph": 0.221,
+    "graph effect (full - no-graph)": -1.4
+   }
+  ],
+  "spearman_with_degree": {
+   "GWN full 60": 0.14,
+   "graph effect": -0.4,
+   "degree": 1.0,
+   "in-degree": 0.86,
+   "out-degree": 0.84,
+   "share <40 mph": 0.34
+  }
+ },
+ "by_day": {
+  "worst_day_gwn": "2012-06-17",
+  "worst_day_gwn_mae": 5.23,
+  "days_gwn_better": 24,
+  "days": 24,
+  "gwn_first_half": 3.48,
+  "gwn_second_half": 3.63,
+  "ha_first_half": 4.19,
+  "ha_second_half": 4.36,
+  "days_gwn_worse_than_ha": [
+   "2012-06-16"
+  ]
+ },
+ "adaptive_adj": {
+  "mass_on_self": 0.007,
+  "mass_on_road_edges": 0.064,
+  "mass_on_non_edges": 0.93,
+  "road_edge_share_of_pairs": 0.061,
+  "strong_edges": 227,
+  "strong_edges_on_road_graph": 0.07,
+  "strong_edges_median_km": 10.231,
+  "road_edges_median_km": 1.684,
+  "all_pairs_median_km": 10.305,
+  "strong_edges_beyond_10km": 0.52,
+  "effective_neighbours_median": 183.166,
+  "rows_nearly_uniform": 84,
+  "top_receivers_share_of_mass": 0.082,
+  "top15_on_road_graph": 1,
+  "top15_median_km": 10.31,
+  "top_hubs": {
+   "716328": 1.809999942779541,
+   "717446": 1.7699999809265137,
+   "717450": 1.7400000095367432,
+   "771667": 1.7300000190734863,
+   "716331": 1.659999966621399
+  }
+ }
+}

@@ -1,0 +1,4 @@
+"congested target after a sharp drop, and",targets,HA,GRU,GWN no-graph,GWN full,graph effect (full - no-graph)
+own input already slow,41786,15.28,13.995,14.067,10.842,-3.226
+"own input fast, a graph neighbour already slow",24569,17.793,31.731,31.645,18.016,-13.63
+"own input fast, no neighbour slow (nothing to see)",9039,14.828,33.846,33.494,17.07,-16.423

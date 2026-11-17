@@ -1,0 +1,4 @@
+model,parameters,max epochs,epochs trained,best epoch,best val MAE,sec / epoch,train time (min),inference (s),final lr,LR cuts
+GRU,51340,40,40,40,3.249,27.323,18.217,3.841,0.0,2
+GWN no-graph,247724,48,48,41,3.234,65.786,52.639,4.851,0.0,4
+GWN full,301016,48,36,28,2.781,117.543,70.533,10.673,0.0,2

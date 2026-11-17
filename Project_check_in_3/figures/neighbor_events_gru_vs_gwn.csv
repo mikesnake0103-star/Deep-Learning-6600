@@ -1,0 +1,6 @@
+events,n,GRU 60,GWN no-graph 60,GWN full 60,graph effect (full - no-graph),full beats no-graph,full beats GRU,GRU bias at t0,GWN no-graph bias at t0,GWN full bias at t0
+all 892 events,892,24.793,24.782,16.473,-8.308,0.784,0.765,25.546,25.539,17.398
+a neighbour dropped earlier,796,25.086,25.023,16.313,-8.711,0.791,0.771,25.681,25.625,16.939
+no neighbour dropped earlier,96,22.367,22.778,17.807,-4.971,0.719,0.708,24.426,24.83,21.201
+an out-of-i neighbour dropped earlier,727,25.749,25.679,16.352,-9.326,0.809,0.784,25.748,25.652,16.462
+no out-of-i neighbour dropped earlier,165,20.581,20.829,17.007,-3.822,0.673,0.679,24.657,25.045,21.52

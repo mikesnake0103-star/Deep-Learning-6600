@@ -1,0 +1,3 @@
+device mps | params 247,724 | train windows 23,967 (375 batches) | val 3,404
+1 epoch: train 64.2s + val 2.4s = 66.7s | train loss 3.819 | val MAE 3.372
+projection: 60 epochs (upper bound) = 66.7 min

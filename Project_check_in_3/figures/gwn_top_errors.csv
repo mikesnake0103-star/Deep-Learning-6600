@@ -1,0 +1,10 @@
+condition,share of top 1% GWN errors,share of all targets,lift
+target is congested (<40 mph),0.697,0.124,5.636
+truth at least 20 mph below HA (unusual slowdown),0.628,0.031,20.564
+truth at least 20 mph above HA (unusual free flow),0.143,0.01,14.143
+sharp drop (>15 mph / 30 min) in the hour before the target,0.67,0.117,5.742
+all 12 own input steps missing,0.089,0.015,5.989
+network-wide outage in the input (>90% sensors missing),0.081,0.013,6.434
+GWN over-predicts (misses a slowdown),0.697,0.512,1.361
+GRU error is also in its own top 1%,0.435,0.01,43.47
+weekend,0.229,0.205,1.118
